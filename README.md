@@ -1,0 +1,1 @@
+The current project is to inspect the html and css elements of the google homepage and attempt to replicate it.  
