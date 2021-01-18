@@ -24,7 +24,7 @@
   width: 90%;
   padding: 10px;
   text-align: center;
-  border: 3px solid #73AD21;
+  
   }
 
 /* LOGO STYLE */
@@ -68,30 +68,29 @@
 }
 
 /* NAV BAR STYLES */
-ul
+.navbar ul
 {
+  
   list-style: none;
   margin:0;
   padding: 0px 0px 30px 0px;
 }
 
-
-
-li a{
+.navbar li a
+{
   float:left;
   color: #000;
   padding: 8px 6px;
   text-decoration: none;
   font-size:11;
   line-height: 15px;
-
-  
 }
 
-li a:hover
+.navbar li a:hover
 {
   text-decoration: underline;
-}
+  list-style-type: none;
+} 
 
 #nav-bar-thumbnails
 {
@@ -103,6 +102,7 @@ li a:hover
 #offered-in-french
 {
   font-size: 11;
+  margin-bottom:45%;
 }
 
 #sign-in-button
@@ -118,7 +118,73 @@ li a:hover
   display: inline-block;
   font-size: 11px;
 }
+
+li a
+{
+text-decoration: none;
+color:rgb(90, 90, 90);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid #ffffff;
+    background-color: #f2f2f2;
+    font-size: 11;
+    margin: 0 0 0 -50;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+
+}
+.footer div ul {
+    list-style: none;
+    display: flex;
+}
+.footer div ul li {
+    padding-left: 27px;
+}
+
+/* Media Queries */
+@media (max-width: 638px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .footer div:nth-child(2) ul {
+        margin-bottom: 15px;
+    }
+    .footer div:nth-child(1) ul li:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 584px) {
+    .main__form {
+        width: 100%;
+    }
+    .main__input {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main__input {
+        padding: 0 15px;
+    }
+    .main__hero img {
+        width: 220px;
+    }
+}
+
 </style>
+
+
 
 <title>Google</title>
 
@@ -126,7 +192,7 @@ li a:hover
 <body>
   <!--Main Nav Bar-->
  
-  <div>
+  <div class = "navbar">
     <ul>
       <li><a href="#">About</a></li>
       <li><a href="#">Store</a></li>
@@ -160,7 +226,38 @@ li a:hover
 </div>
 
 
-
+ <!-- Footer -->
+ <footer class="footer">
+  <div>
+    <ul class="footer__list">
+      <li class="footer__item" style="padding-left: 0;">
+        <a href="#" class="footer__link">Advertising</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Business</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">About</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">How Search works</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="footer__list">
+      <li class="footer__item" style="padding-left: 0;">
+        <a href="#" class="footer__link">Privacy</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Terms</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Settings</a>
+      </li>
+    </ul>
+  </div>
+</footer>
 </body>
 
 
